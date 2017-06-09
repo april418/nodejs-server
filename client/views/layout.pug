@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/application.css')
+    script(src='/javascripts/application.js')
+
+  body.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+    header.mdl-layout__header
+      .mdl-layout__header-row
+        button#dashboard(data-is="mdl-button" icon="dashboard" raised="true" with-ripple="true")
+        div(data-is="mdl-tooltip" for="dashboard" label="dashboard")
+        button#monitoring(data-is="mdl-button" icon="visibility" raised="true" with-ripple="true")
+        div(data-is="mdl-tooltip" for="monitoring" label="monitoring")
+        button#meter(data-is="mdl-button" icon="developer_board" raised="true" with-ripple="true")
+        div(data-is="mdl-tooltip" for="meter" label="meter")
+        button#contour(data-is="mdl-button" icon="layers" raised="true" with-ripple="true")
+        div(data-is="mdl-tooltip" for="contour" label="contour")
+        button#settings(data-is="mdl-button" icon="settings" raised="true" with-ripple="true")
+        div(data-is="mdl-tooltip" for="settings" label="settings")
+        button#maintenance(data-is="mdl-button" icon="build" raised="true" with-ripple="true")
+        div(data-is="mdl-tooltip" for="maintenance" label="maintenance")
+        .mdl-layout-spacer
+        button#logout(data-is="mdl-button" icon="close" raised="true" with-ripple="true")
+        div(data-is="mdl-tooltip" for="logout" label="logout")
+
+    main.mdl-layout__content
+      block content
+

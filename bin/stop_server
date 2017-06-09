@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function stop_server() {
+  if [ ! -z "$CYGWIN" ]; then
+    taskkill /im node.exe /f
+  else
+    killall -9 node
+  fi
+}
+
+stop_server
+

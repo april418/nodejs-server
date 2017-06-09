@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+require('coffee-script/register');
+var Application = require('../server/application');
+
+/**
+ * Create HTTP server.
+ */
+var app = new Application();
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+app.start();
+
